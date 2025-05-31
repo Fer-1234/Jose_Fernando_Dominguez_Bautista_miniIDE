@@ -1,0 +1,375 @@
+:root {
+  --neon-purple: #bc13fe;
+  --neon-blue: #0ff0fc;
+  --neon-pink: #ff44cc;
+  --neon-orange: #ff9d00;
+  --neon-green: #39ff14;
+  --dark-bg: #0a0a12;
+  --darker-bg: #050508;
+  --card-bg: #12121a;
+  --text-light: #f0f0f0;
+  --text-gray: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.neon-container {
+  display: flex;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.main-panel {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.neon-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.neon-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.neon-text {
+  color: var(--neon-purple);
+  text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+}
+
+.subtitle {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.neon-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+}
+
+.card-title {
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.code-editor {
+  height: 300px;
+  border: 1px solid rgba(188, 19, 254, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.CodeMirror {
+  height: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.results-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tokens-container, .error-container {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(188, 19, 254, 0.1);
+}
+
+th {
+  background-color: rgba(188, 19, 254, 0.1);
+  color: var(--neon-purple);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.error-message {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 3px solid #ff0000;
+}
+
+.error-message.success {
+  background-color: rgba(57, 255, 20, 0.1);
+  border-left: 3px solid var(--neon-green);
+}
+
+.correction {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.neon-button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  flex-grow: 1;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.neon-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.neon-button.purple {
+  background-color: var(--neon-purple);
+  color: white;
+}
+
+.neon-button.blue {
+  background-color: var(--neon-blue);
+  color: var(--darker-bg);
+}
+
+.neon-button.orange {
+  background-color: var(--neon-orange);
+  color: white;
+}
+
+.neon-button.green {
+  background-color: var(--neon-green);
+  color: var(--darker-bg);
+}
+
+.turing-section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(188, 19, 254, 0.2);
+  border-radius: 6px;
+  color: var(--text-light);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 10px rgba(188, 19, 254, 0.2);
+}
+
+.result-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+}
+
+.result-icon {
+  font-size: 2rem;
+}
+
+.result-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.result-box.accepted {
+  background-color: rgba(57, 255, 20, 0.1);
+  border: 1px solid var(--neon-green);
+}
+
+.result-box.rejected {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+}
+
+.rules-box {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+}
+
+.rules-box h4 {
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rules-box ul {
+  padding-left: 1.5rem;
+}
+
+.rules-box li {
+  margin-bottom: 0.5rem;
+  color: var(--text-gray);
+}
+
+.path-container {
+  flex-grow: 1;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+}
+
+.path-container h4 {
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#path-content {
+  height: 200px;
+  overflow-y: auto;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.path-msg {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+.path-step {
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(188, 19, 254, 0.1);
+}
+
+.path-step:last-child {
+  border-bottom: none;
+}
+
+.student-info {
+  margin-top: auto;
+}
+
+.neon-badge {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(188, 19, 254, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(188, 19, 254, 0.1);
+}
+
+.neon-badge h3 {
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.neon-badge p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.error-line {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-left: 3px solid #ff0000;
+}
+
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .neon-button {
+    width: 100%;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

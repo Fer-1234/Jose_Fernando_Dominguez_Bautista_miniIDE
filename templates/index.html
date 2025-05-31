@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO INTEGRADOR - Lenguajes y Autómatas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/neon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="neon-container">
+        <div class="main-panel">
+            <div class="neon-header">
+                <h1><span class="neon-text">MINI</span>IDE</h1>
+                <p class="subtitle">Lenguajes y Autómatas I</p>
+            </div>
+
+            <div class="neon-card">
+                <h2 class="card-title">EDITOR DE CÓDIGO</h2>
+                <div class="code-editor">
+                    <textarea id="editor">// Ejemplo básico
+x = 5;
+si (x > 0) entonces {
+    y = "Hola mundo";
+}</textarea>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="lexical-btn" class="neon-button purple">
+                    <span class="icon">🔍</span> Análisis Léxico
+                </button>
+                <button id="syntax-btn" class="neon-button blue">
+                    <span class="icon">📐</span> Análisis Sintáctico
+                </button>
+                <button id="clear-btn" class="neon-button orange">
+                    <span class="icon">🗑️</span> Limpiar Todo
+                </button>
+            </div>
+
+            <div class="tokens-container" id="tokens-container" style="display: none;">
+                <h3 class="content-title">TOKENS LÉXICOS</h3>
+                <div class="table-container">
+                    <table id="tokens-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Valor</th>
+                                <th>Línea</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="error-container" id="error-container" style="display: none;">
+                <h3 class="content-title">ERRORES</h3>
+                <div id="errors-content">
+                </div>
+            </div>
+
+            <div class="turing-section">
+                <div class="input-group">
+                    <label for="turing-input">Ingresa secuencia (a y b):</label>
+                    <input type="text" id="turing-input" value="abab" placeholder="Ej: abab">
+                    <button id="run-turing-btn" class="neon-button green">
+                        <span class="icon">▶</span> Validar
+                    </button>
+                </div>
+
+                <div id="turing-result" class="result-box">
+                    <div class="result-icon">❌</div>
+                    <div class="result-text">NO VÁLIDO</div>
+                </div>
+
+                <div class="rules-box">
+                    <h4>REGLAS:</h4>
+                    <ul>
+                        <li>Debe comenzar con 'a'</li>
+                        <li>Alternancia perfecta (a, b, a, b...)</li>
+                        <li>Debe terminar con 'b'</li>
+                        <li>Misma cantidad de 'a's y 'b's</li>
+                    </ul>
+                </div>
+
+                <div class="path-container">
+                    <h4>TRAZA DE EJECUCIÓN:</h4>
+                    <div id="path-content">
+                        <p class="path-msg">Ingresa una secuencia y haz clic en Validar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-info">
+                <div class="neon-badge">
+                    <h3>INFORMACIÓN DEL ESTUDIANTE</h3>
+                    <p><strong>Nombre:</strong> {{ student_info.Nombre }}</p>
+                    <p><strong>Matrícula:</strong> {{ student_info.Matricula }}</p>
+                    <p><strong>Materia:</strong> {{ student_info.Materia }}</p>
+                    <p><strong>Profesor:</strong> {{ student_info.Profesor }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/matchbrackets.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
