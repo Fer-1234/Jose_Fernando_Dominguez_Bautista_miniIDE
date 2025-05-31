@@ -26,7 +26,7 @@
    - python app.py
 
 4. Acceso
-   -Abrir en navegador : http://127.0.0.1:5000
+   -Abrir en navegador : `http://127.0.0.1:5000`
 
  ##  Lenguaje personalizado
 
