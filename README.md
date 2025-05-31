@@ -81,66 +81,66 @@
 **Léxicos**
 
 1. Caracteres no válidos:
-Ejemplo: x = ##5;
-Error: Carácter no válido: '#'
-Corrección: Remover carácter no válido
+- Ejemplo: x = ##5; 
+- Error: Carácter no válido: '#'
+- Corrección: Remover carácter no válido
 2. Strings no cerrados:
-Ejemplo: materia = "Automatas;
-Error: Carácter no válido: ';' (dentro del string no cerrado)
-Corrección: Usar comillas: "texto"
+- Ejemplo: materia = "Automatas;
+- Error: Carácter no válido: ';' (dentro del string no cerrado)
+- Corrección: Usar comillas: "texto"
 3. Identificadores inválidos:
-Ejemplo: 123.var = 5;
-Error: Carácter no válido: '.' (al final del numero)
-Corrección: Los numeros deben ser decimales o remover el punto
+- Ejemplo: 123.var = 5;
+- Error: Carácter no válido: '.' (al final del numero)
+- Corrección: Los numeros deben ser decimales o remover el punto
 
 **Sintácticos**
 
 1. Falta de punto y coma: 
-Ejemplo: v  5;
-Error: Falta '=' al final de la expresión
-Corrección: v = 5;
+- Ejemplo: v  5;
+- Error: Falta '=' al final de la expresión
+- Corrección: v = 5;
 2. Condicionales mal formados:
-Ejemplo: si x > 5 entonces { ... }
-Error: Falta '(' después de 'si'
-Corrección: si (x > 5) entonces { ... }
+- Ejemplo: si x > 5 entonces { ... }
+- Error: Falta '(' después de 'si'
+- Corrección: si (x > 5) entonces { ... }
 3. Operador lógico mal usado:
-Ejemplo: si (x > 5 & y < 10) entonces {
+- Ejemplo: si (x > 5 & y < 10) entonces {
     z = 0;
 }
-Error: Operador '&' no válido. Use '&&' para AND lógico.
-Corrección:si (x > 5 && y < 10) entonces {
+- Error: Operador '&' no válido. Use '&&' para AND lógico.
+- Corrección:si (x > 5 && y < 10) entonces {
     z = 0;
 }
 4. Asignaciones incorrectas:
-Ejemplo: x == 5;
-Error: Falta '=' en la asignación
-Corrección: x = 5;
+- Ejemplo: x == 5;
+- Error: Falta '=' en la asignación
+- Corrección: x = 5;
 5. Expresión aritmética incompleta:
-Ejemplo: x = 5 + ;
-Error: xpresión incompleta después del operador '+'
-Corrección: x = 5 + 3;
+- Ejemplo: x = 5 + ;
+- Error: xpresión incompleta después del operador '+'
+- Corrección: x = 5 + 3;
 
 **Máquina de Turing**
 1. Caracteres no válidos:
-Ejemplo: abc
-Error: Error: no se reconocio 'c'
-Corrección: La cadena debe contener solo 'a' y 'b'
+- Ejemplo: abc
+- Error: Error: no se reconocio 'c'
+- Corrección: La cadena debe contener solo 'a' y 'b'
 2. No comienza con 'a':
-Ejemplo: bab
-Error: Error: debe comenzar con 'a'
-Corrección: La cadena debe comenzar con 'a'
+- Ejemplo: bab
+- Error: Error: debe comenzar con 'a'
+- Corrección: La cadena debe comenzar con 'a'
 4. Símbolos repetidos:
-Ejemplo: aab
-Error: Error: dos 'a' seguidos
-Corrección: Debe alternar perfectamente entre 'a' y 'b'
+- Ejemplo: aab
+- Error: Error: dos 'a' seguidos
+- Corrección: Debe alternar perfectamente entre 'a' y 'b'
 5. No termina con 'b':
-Ejemplo: aba
-Error: Error: cadena incompleta
-Corrección: La cadena debe terminar con 'b'
+- Ejemplo: aba
+- Error: Error: cadena incompleta
+- Corrección: La cadena debe terminar con 'b'
 6. Transición no definida:
-Ejemplo: a (cadena incompleta)
-Error: Error: 'b' sin procesar
-Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
+- Ejemplo: a (cadena incompleta)
+- Error: Error: 'b' sin procesar
+- Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 
 
 ## Ejemplos válidos
@@ -163,7 +163,7 @@ Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 2. si (x != 0)entonces { y = 10 / x; }
 3. (a + b) * (c - d);
 
-   ![image](https://github.com/user-attachments/assets/49f4f971-4e85-4dd2-84d7-886c64ab37aa)
+   ![image](https://github.com/user-attachments/assets/6ce32e67-ebc8-4e53-b3f4-6d3747dd353b)
 
 
 **Maquina de Turing** 
