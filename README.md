@@ -9,17 +9,8 @@
 
 ## Estructura del proyecto
 
-miniIDE/
-├── app.py               # Aplicación principal Flask
-├── lexer.py             # Analizador léxico
-├── parser.py            # Analizador sintáctico
-├── README.md            # Intructivo
-├── turing_machine.py    # Implementación Máquina de Turing
-├── templates/
-│   └── index.html       # Interfaz web
-└── static/
-    ├── style.css        # Estilos CSS
-    └── script.js        # Lógica frontend
+![image](https://github.com/user-attachments/assets/2e76b2a5-fe77-4151-ae9e-ef8b7a8b92d8)
+
 
 ##  Instrucciones para ejecutar el proyecto
 
@@ -159,6 +150,9 @@ Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 2. resultado = (5 + 3) * 2 - 1;
 3. y = (5 + 3) * 2;
 
+   ![image](https://github.com/user-attachments/assets/c150b8d6-296b-4768-83ce-43b6f49e3660)
+
+
 **Sintactico** 
 1. mientras (contador < 5) hacer {
     contador = contador + 1;
@@ -169,10 +163,16 @@ Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 2. si (x != 0)entonces { y = 10 / x; }
 3. (a + b) * (c - d);
 
+   ![image](https://github.com/user-attachments/assets/49f4f971-4e85-4dd2-84d7-886c64ab37aa)
+
+
 **Maquina de Turing** 
 1. ababab
 2. abab
 3. abababab
+
+   ![image](https://github.com/user-attachments/assets/78c772eb-5e26-41c3-94e5-3f7d84228480)
+
 
 ## Ejemplos inválidos
 
@@ -181,13 +181,24 @@ Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 2. precio = $100; 
 3. z = a ^ b;
 
+   ![image](https://github.com/user-attachments/assets/7c85e80f-02c6-41c1-8fa9-00a834bb418f)
+   
+
 **Sintactico** 
 1. y = 10  
 2. mientras (x < 10 hacer { x++; } 
 3. z = a + * b;
 
+   ![image](https://github.com/user-attachments/assets/d74195ce-3717-4ba5-a642-b448360409ea)
+
+
 **Maquina de Turing** 
 1. aabb  
 2. aaa
 3. ababaa
+
+   ![image](https://github.com/user-attachments/assets/7d77c379-c5c2-4183-8d8e-89042b149564)
+
+
+
 
