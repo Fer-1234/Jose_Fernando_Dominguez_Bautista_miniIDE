@@ -51,30 +51,34 @@ miniIDE/
 ##  Diccionario de operadores
 
 1. Operadores Aritméticos
-| **Operador** | **Descripción**         | 
-| ------------ | ----------------------- | 
-|   +          | Suma                    |  
-|   -          | Resta                   |  
-|   *          | Multiplicación          |  
-|   /          | División                |  
-|   ()         | Paréntesis (agrupación) |        
+   
+|  **Operador**  | **Descripción**         | 
+| -------------- | ----------------------- | 
+|     +          | Suma                    |  
+|     -          | Resta                   |  
+|     *          | Multiplicación          |  
+|     /          | División                |  
+|     ()         | Paréntesis (agrupación) |        
 
-2. Operadores Relacionales
-| **Operador** | **Descripción** | 
-| ------------ | --------------- | 
-|   ==         | Igualdad        |  
-|  !=          | Desigualdad     |  
-|  <           | Menor que       |  
-|  >           | Mayor que       |  
-|  <=          | Menor o igual   |  
-|  >=          | Mayor o igual   |  
+3. Operadores Relacionales
 
-3. Operadores de Asignación
+|  **Operador**   | **Descripción** | 
+| ----------------| --------------- | 
+|      ==         | Igualdad        |  
+|     !=          | Desigualdad     |  
+|     <           | Menor que       |  
+|     >           | Mayor que       |  
+|     <=          | Menor o igual   |  
+|     >=          | Mayor o igual   |  
+
+5. Operadores de Asignación
+   
 | **Operador** | **Descripción**   | 
 | ------------ | ----------------- | 
 |  =           | Asignación básica | 
 
-4. Operadores Especiales
+7. Operadores Especiales
+   
 | **Operador** | **Descripción**     |
 | ------------ | ------------------- | 
 |  ;           | Fin de declaración  |  
@@ -186,3 +190,4 @@ Corrección: La cadena debe tener igual cantidad de 'a' y 'b'
 1. aabb  
 2. aaa
 3. ababaa
+
